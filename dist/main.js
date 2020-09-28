@@ -104,7 +104,7 @@ eval("const { checkValidation, createElement, printTitle } = __webpack_require__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\nconst fetchData = () => {\n  return axios\n    .get('https://jsonplaceholder.typicode.com/todos/1')\n    .then(response => {\n      return response.data;\n    });\n};\n\nexports.fetchData = fetchData;\n\n//# sourceURL=webpack:///./http.js?");
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\nconst fetchData = () => {\n  console.log('hitting fetch data...')\n  return axios\n    .get('https://jsonplaceholder.typicode.com/todos/1')\n    .then(response => {\n      return response.data;\n    });\n};\n\nexports.fetchData = fetchData;\n\n//# sourceURL=webpack:///./http.js?");
 
 /***/ }),
 

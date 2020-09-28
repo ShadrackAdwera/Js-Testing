@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
 const { generateText, checkValidation, loadTitle } = require('./util');
 
+jest.mock('./http')
+
 //Unit tests
 describe('Util.js', () => {
   it('should output both name and age', () => {
