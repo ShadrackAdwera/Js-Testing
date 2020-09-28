@@ -1,9 +1,11 @@
-const { checkValidation, createElement } = require('./util');
+const { checkValidation, createElement, printTitle } = require('./util');
 
 const initApp = () => {
   // Initializes the app, registers the button click listener
   const newUserButton = document.querySelector('#btnAddUser');
+  const loadTitleButton = document.querySelector('#btnLoadTitle')
   newUserButton.addEventListener('click', addUser);
+  loadTitleButton.addEventListener('click', printTitle)
 };
 
 const addUser = () => {
