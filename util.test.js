@@ -24,24 +24,24 @@ describe('Util.js', () => {
 });
 
 //e2e test
-// describe('e2e', ()=> {
-//     it('should simulate a user\'s actions', async()=>{
-//         const browser = await puppeteer.launch({
-//             headless: false,
-//             slowMo: 80,
-//             args: ['--window-size=1920,1080']
-//         })
-//         const page = await browser.newPage()
-//         await page.goto('file:///home/adwesh/Downloads/Compressed/testing-01-starting-setup/testing-01-starting-setup/index.html')
-//         await page.click('input#name')
-//         await page.type('input#name','Shaddie')
-//         await page.click('input#age')
-//         await page.type('input#age', '24')
-//         await page.click('#btnAddUser')
-//         const text = await page.$eval('.user-list', el=>el.textContent)
-//         expect(text).toBe('Shaddie (24 years old)')
-//     })
-// })
+describe('e2e', ()=> {
+    it('should simulate a user\'s actions', async()=>{
+        const browser = await puppeteer.launch({
+            headless: false,
+            slowMo: 80,
+            args: ['--window-size=1920,1080']
+        })
+        const page = await browser.newPage()
+        await page.goto('file:///home/adwesh/Downloads/Compressed/testing-01-starting-setup/testing-01-starting-setup/index.html')
+        await page.click('input#name')
+        await page.type('input#name','Shaddie')
+        await page.click('input#age')
+        await page.type('input#age', '24')
+        await page.click('#btnAddUser')
+        const text = await page.$eval('.user-list', el=>el.textContent)
+        expect(text).toBe('Shaddie (24 years old)')
+    })
+})
 
 //Test async code
 describe('dealing with async code', () => {
