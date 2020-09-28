@@ -5,4 +5,8 @@ describe('Util.js', ()=>{
         const nameAge = generateText('Adwera',25)
         expect(nameAge).toBe('Adwera (25 years old)')
     })
+    it('Returns a data-less text', ()=>{
+        const nameAge = generateText(' ',null)
+        expect(nameAge).toBe('  (null years old)')
+    })
 })
